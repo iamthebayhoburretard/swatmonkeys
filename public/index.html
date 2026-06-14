@@ -5,86 +5,101 @@
 
 <style>
 body {
-  background-image: url("images/gif.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0;
-  min-height: 100vh;
-  overflow: hidden;
+    background-image: url("images/gif.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Intro Screen */
 #intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 /* Main Content */
 #content {
-  display: none;
-  text-align: center;
-  color: white;
-  padding-top: 100px;
+    display: none;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
 }
 
+/* ASCII Logo */
 .logo {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 4rem;
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.5),
-    0 0 20px rgba(255,255,255,0.2);
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
+.logo pre {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: clamp(0.25rem, 0.7vw, 0.75rem);
+    line-height: 1.1;
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.7),
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 40px rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.25);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+/* Divider Line */
 .line {
-  width: 300px;
-  height: 1px;
-  background: rgba(255,255,255,0.4);
-  margin: 0 auto 35px auto;
+    width: 350px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    margin: 20px auto 35px auto;
 }
 
-/* Navigation Buttons */
+/* Buttons */
 .menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .btn {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: white;
-  padding: 12px 28px;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  text-shadow: 0 0 8px rgba(255,255,255,0.5);
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    padding: 12px 28px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
 .btn:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,0.8);
-  box-shadow:
-    0 0 10px rgba(255,255,255,0.5),
-    0 0 25px rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.12);
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.8);
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 25px rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12);
 }
 </style>
 </head>
@@ -92,12 +107,12 @@ body {
 <body>
 
 <div id="intro" onclick="enterSite()">
-  Click to Enter
+    Click to Enter
 </div>
 
 <div id="content">
-  <div id="content">
-  <div class="logo">
+
+<div class="logo">
 <pre>
 ███████╗██╗    ██╗ █████╗ ████████╗███╗   ███╗ ██████╗ ███╗   ██╗██╗  ██╗███████╗██╗   ██╗███████╗
 ██╔════╝██║    ██║██╔══██╗╚══██╔══╝████╗ ████║██╔═══██╗████╗  ██║██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
@@ -106,40 +121,34 @@ body {
 ███████║╚███╔███╔╝██║  ██║   ██║   ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║  ██╗███████╗   ██║   ███████║
 ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
 </pre>
-  </div>
+</div>
 
-  <div class="line"></div>
+<div class="line"></div>
 
-  <div class="menu">
+<div class="menu">
     <a href="roster.html" class="btn">Roster</a>
     <a href="content.html" class="btn">Content</a>
     <a href="hoa.html" class="btn">HOA</a>
-  </div>
-</div>
-  <div class="line"></div>
-
-  <div class="menu">
-    <a href="roster.html" class="btn">Roster</a>
-    <a href="content.html" class="btn">Content</a>
-    <a href="hoa.html" class="btn">HOA</a>
-  </div>
 </div>
 
-<!-- Background Music -->
+</div>
+
+<!-- Music -->
 <audio id="bgMusic" loop>
-  <source src="audio/shotgun..mp3" type="audio/mpeg">
+    <source src="audio/shotgun.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 function enterSite() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("content").style.display = "block";
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("content").style.display = "block";
 
-  const music = document.getElementById("bgMusic");
-  music.volume = 0.4;
-  music.play().catch(error => {
-    console.log("Audio playback blocked:", error);
-  });
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.4;
+
+    music.play().catch(err => {
+        console.log("Music failed:", err);
+    });
 }
 </script>
 
