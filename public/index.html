@@ -15,13 +15,10 @@ body {
     overflow: hidden;
 }
 
-/* Intro Screen */
+/* Enter Screen */
 #intro {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
@@ -31,42 +28,48 @@ body {
     font-size: 2rem;
     cursor: pointer;
     z-index: 1000;
+    text-shadow: 0 0 10px white;
 }
 
-/* Main Content */
+/* Main Content Centered */
 #content {
     display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    padding-top: 80px;
+    width: 100%;
 }
 
 /* ASCII Logo */
 .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .logo pre {
     font-family: Consolas, "Courier New", monospace;
-    font-size: clamp(0.25rem, 0.7vw, 0.75rem);
+    font-size: clamp(0.4rem, 0.9vw, 1rem);
     line-height: 1.1;
     color: white;
     text-align: center;
     text-shadow:
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 20px rgba(255,255,255,0.4),
-        0 0 40px rgba(255,255,255,0.2);
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.5),
+        0 0 40px rgba(255,255,255,0.3);
     background: rgba(0,0,0,0.25);
     padding: 20px;
     border-radius: 12px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
 
-/* Divider Line */
+/* Divider */
 .line {
-    width: 350px;
+    width: 400px;
+    max-width: 80%;
     height: 1px;
     background: rgba(255,255,255,0.4);
     margin: 20px auto 35px auto;
@@ -77,6 +80,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -86,7 +90,7 @@ body {
     color: white;
     padding: 12px 28px;
     border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 8px;
+    border-radius: 10px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(8px);
     transition: all 0.3s ease;
@@ -133,9 +137,7 @@ body {
 
 </div>
 
-<!-- Music -->
-<!-- Music -->
-<audio id="bgMusic" controls loop style="display:none;">
+<audio id="bgMusic" loop>
     <source src="music/shotgun.mp3" type="audio/mpeg">
 </audio>
 
@@ -146,19 +148,11 @@ function enterSite() {
 
     const music = document.getElementById("bgMusic");
 
-    music.muted = false;
-    music.volume = 1.0;
+    music.volume = 0.5;
 
-    music.play()
-        .then(() => {
-            console.log("Music started");
-        })
-        .catch(error => {
-            console.error("Music failed:", error);
-
-            // Show player if browser blocks autoplay
-            music.style.display = "block";
-        });
+    music.play().catch(error => {
+        console.log("Music failed:", error);
+    });
 }
 </script>
 
