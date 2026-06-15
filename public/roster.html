@@ -1,188 +1,105 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<title>SWATMONKEYS - Roster</title>
-
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<!-- HALL OF FAME -->
 
 <style>
-body {
-    background-image: url("images/gif.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    min-height: 100vh;
-    color: white;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.logo pre {
-    font-family: Consolas, monospace;
-    font-size: clamp(0.4rem, 0.9vw, 1rem);
-    line-height: 1.1;
-    color: white;
-
-    text-shadow:
-        0 0 10px rgba(255,255,255,.8),
-        0 0 20px rgba(255,255,255,.5),
-        0 0 40px rgba(255,255,255,.3);
-
-    background: rgba(0,0,0,.25);
-    padding: 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(5px);
-}
-
-.line {
-    width: 400px;
-    max-width: 80%;
-    height: 1px;
-    background: rgba(255,255,255,.4);
-    margin: 25px auto;
-}
-
-.roster-title {
-    text-align: center;
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.roster-grid {
+.hall-container {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1350px;
+    margin: 50px auto;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-
-    padding-bottom: 50px;
-}
-
-.profile {
-    background: rgba(0,0,0,.35);
-    border: 1px solid rgba(255,255,255,.25);
-    border-radius: 12px;
-    padding: 25px;
-
+    background: rgba(0,0,0,.45);
     backdrop-filter: blur(8px);
 
-    text-align: center;
-}
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 20px;
 
-.profile:hover {
-    border-color: rgba(255,255,255,.8);
+    padding: 40px;
 
     box-shadow:
-        0 0 10px rgba(255,255,255,.3),
+    0 0 30px rgba(255,255,255,.08),
+    inset 0 0 40px rgba(255,255,255,.03);
+}
+
+.hall-title {
+    text-align: center;
+    color: white;
+
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 2.8rem;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.4),
         0 0 25px rgba(255,255,255,.15);
 }
 
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
+.hall-grid {
+    display: grid;
 
-    border: 2px solid rgba(255,255,255,.4);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 14px;
 }
 
-.name {
-    font-size: 1.4rem;
-    margin-top: 15px;
-}
+.hall-member {
+    height: 52px;
 
-.rank {
-    color: rgba(255,255,255,.7);
-    margin-top: 5px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.bio {
-    margin-top: 10px;
-}
+    background: rgba(0,0,0,.85);
 
-.back {
-    position: fixed;
-    top: 15px;
-    left: 15px;
+    border: 2px solid rgba(255,255,255,.75);
+    border-radius: 14px;
 
     color: white;
-    text-decoration: none;
+    font-family: Consolas, monospace;
+    font-weight: bold;
 
-    padding: 10px 15px;
+    transition: .2s ease;
+}
 
-    border: 1px solid rgba(255,255,255,.3);
-    border-radius: 8px;
+.hall-member:hover {
+    border-color: white;
 
-    background: rgba(0,0,0,.4);
-    backdrop-filter: blur(5px);
+    box-shadow:
+        0 0 10px rgba(255,255,255,.25),
+        0 0 25px rgba(255,255,255,.12);
+
+    transform: translateY(-2px);
 }
 </style>
 
-</head>
+<div class="hall-container">
 
-<body>
+    <div class="hall-title">Hall Of Fame</div>
 
-<a href="index.html" class="back">← Home</a>
+    <div class="hall-grid">
 
-<div class="logo">
-<pre>
-███████╗██╗    ██╗ █████╗ ████████╗███╗   ███╗ ██████╗ ███╗   ██╗██╗  ██╗███████╗██╗   ██╗███████╗
-██╔════╝██║    ██║██╔══██╗╚══██╔══╝████╗ ████║██╔═══██╗████╗  ██║██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
-███████╗██║ █╗ ██║███████║   ██║   ██╔████╔██║██║   ██║██╔██╗ ██║█████╔╝ █████╗   ╚████╔╝ ███████╗
-╚════██║██║███╗██║██╔══██║   ██║   ██║╚██╔╝██║██║   ██║██║╚██╗██║██╔═██╗ ██╔══╝    ╚██╔╝  ╚════██║
-███████║╚███╔███╔╝██║  ██║   ██║   ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║  ██╗███████╗   ██║   ███████║
-╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
-</pre>
-</div>
+        <div class="hall-member">sorrow</div>
+        <div class="hall-member">xanz</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
 
-<div class="line"></div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
 
-<div class="roster-title">Roster</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
+        <div class="hall-member">member</div>
 
-<div class="roster-grid">
-
-```
-<div class="profile">
-    <img src="images/pfp 1.jpg" class="avatar">
-    <div class="name">sorrow</div>
-    <div class="rank">founder</div>
-    <div class="bio">Founder of SWATMONKEYS.</div>
-</div>
-
-<div class="profile">
-    <img src="images/pfp 2.jpg" class="avatar">
-    <div class="name">xanz</div>
-    <div class="rank">founder</div>
-    <div class="bio">Founder of SWATMONKEYS.</div>
-</div>
-```
-<!-- MUSIC -->
-<audio id="hoaMusic" loop autoplay>
-    <source src="music/rostersong.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-window.addEventListener('load', () => {
-    const music = document.getElementById('hoaMusic');
-    music.volume = 0.5;
-
-    music.play().catch(err => {
-        console.log("Music blocked:", err);
-    });
-});
-</script>
+    </div>
 
 </div>
-
-</body>
-</html>
