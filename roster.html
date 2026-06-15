@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>SWATMONKEYS - Roster</title>
+
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background-image: url("images/gif.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.logo pre {
+    font-family: Consolas, monospace;
+    font-size: clamp(0.4rem, 0.9vw, 1rem);
+    line-height: 1.1;
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.8),
+        0 0 20px rgba(255,255,255,.5),
+        0 0 40px rgba(255,255,255,.3);
+
+    background: rgba(0,0,0,.25);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.line {
+    width: 400px;
+    max-width: 80%;
+    height: 1px;
+    background: rgba(255,255,255,.4);
+    margin: 25px auto;
+}
+
+.roster-title {
+    text-align: center;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.roster-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+
+    padding-bottom: 50px;
+}
+
+.profile {
+    background: rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 12px;
+    padding: 25px;
+
+    backdrop-filter: blur(8px);
+
+    text-align: center;
+}
+
+.profile:hover {
+    border-color: rgba(255,255,255,.8);
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,.3),
+        0 0 25px rgba(255,255,255,.15);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid rgba(255,255,255,.4);
+}
+
+.name {
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+.rank {
+    color: rgba(255,255,255,.7);
+    margin-top: 5px;
+}
+
+.bio {
+    margin-top: 10px;
+}
+
+.back {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 8px;
+
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(5px);
+}
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Home</a>
+
+<div class="logo">
+<pre>
+███████╗██╗    ██╗ █████╗ ████████╗███╗   ███╗ ██████╗ ███╗   ██╗██╗  ██╗███████╗██╗   ██╗███████╗
+██╔════╝██║    ██║██╔══██╗╚══██╔══╝████╗ ████║██╔═══██╗████╗  ██║██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
+███████╗██║ █╗ ██║███████║   ██║   ██╔████╔██║██║   ██║██╔██╗ ██║█████╔╝ █████╗   ╚████╔╝ ███████╗
+╚════██║██║███╗██║██╔══██║   ██║   ██║╚██╔╝██║██║   ██║██║╚██╗██║██╔═██╗ ██╔══╝    ╚██╔╝  ╚════██║
+███████║╚███╔███╔╝██║  ██║   ██║   ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║  ██╗███████╗   ██║   ███████║
+╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
+</pre>
+</div>
+
+<div class="line"></div>
+
+<div class="roster-title">Roster</div>
+
+<div class="roster-grid">
+
+```
+<div class="profile">
+    <img src="images/person1.jpg" class="avatar">
+    <div class="name">Monkey</div>
+    <div class="rank">Owner</div>
+    <div class="bio">Founder of SWATMONKEYS.</div>
+</div>
+
+<div class="profile">
+    <img src="images/person1.jpg" class="avatar">
+    <div class="name">Ghost</div>
+    <div class="rank">Moderator</div>
+    <div class="bio">Operations & content.</div>
+</div>
+```
+
+</div>
+
+</body>
+</html>
