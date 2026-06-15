@@ -153,19 +153,34 @@ body {
 
 ```
 <div class="profile">
-    <img src="images/person1.jpg" class="avatar">
+    <img src="images/pfp 1.jpg" class="avatar">
     <div class="name">sorrow</div>
     <div class="rank">founder</div>
     <div class="bio">Founder of SWATMONKEYS.</div>
 </div>
 
 <div class="profile">
-    <img src="images/person1.jpg" class="avatar">
+    <img src="images/pfp 2.jpg" class="avatar">
     <div class="name">xanz</div>
     <div class="rank">founder</div>
     <div class="bio">Founder of SWATMONKEYS.</div>
 </div>
 ```
+<!-- MUSIC -->
+<audio id="hoaMusic" loop autoplay>
+    <source src="music/rostersong.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener('load', () => {
+    const music = document.getElementById('hoaMusic');
+    music.volume = 0.5;
+
+    music.play().catch(err => {
+        console.log("Music blocked:", err);
+    });
+});
+</script>
 
 </div>
 
