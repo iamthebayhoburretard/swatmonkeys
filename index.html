@@ -1,87 +1,206 @@
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>waddle</title>
-<link rel="stylesheet" href="/re/stylish.css">
-<base target="_blank">
-<base target="_blank">
+<title>a k 4 7</title>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background-image: url("images/gif2.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Enter Screen */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    text-shadow: 0 0 10px white;
+}
+
+/* Main Content Centered */
+#content {
+    display: none;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding-top: 30px;
+}
+
+/* ASCII Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.logo pre {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: clamp(0.4rem, 0.9vw, 1rem);
+    line-height: 1.1;
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.5),
+        0 0 40px rgba(255,255,255,0.3);
+    background: rgba(0,0,0,0.25);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+/* Divider */
+.line {
+    width: 400px;
+    max-width: 80%;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    margin: 20px auto 35px auto;
+}
+
+/* Buttons */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    padding: 12px 28px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.8);
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 25px rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12);
+}
+
+.notice-link {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: white;
+    text-decoration: none;
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+    z-index: 2000;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 8px rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
+}
+
+.notice-link:hover {
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+}
+
+.notice-link:hover {
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+}
+.notice-link:hover {
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+}
+</style>
+</style>
 </head>
+
+
 <body>
-<div class="overlay">
 
-<pre>    
- ________  _________  ________  ________  ___       __      
-|\   ____\|\___   ___\\   __  \|\   __  \|\  \     |\  \    
-\ \  \___|\|___ \  \_\ \  \|\  \ \  \|\  \ \  \    \ \  \   
- \ \_____  \   \ \  \ \ \   _  _\ \   __  \ \  \  __\ \  \  
-  \|____|\  \   \ \  \ \ \  \\  \\ \  \ \  \ \  \|\__\_\  \ 
-    ____\_\  \   \ \__\ \ \__\\ _\\ \__\ \__\ \____________\
-   |\_________\   \|__|  \|__|\|__|\|__|\|__|\|____________|
-   \|_________|   
-</pre>
+<a href="notice.html" class="notice-link">
+    NOTICE TO LAW ENFORCEMENT
+</a>
 
-<h1>about</h1>
-<p>an epic developer deving idk.</p>
+<div id="intro" onclick="enterSite()">
+    Enter
+</div>
 
-<hr>
+<div id="content">
 
-<h1>systems</h1>
-<ul>
-<li>waddle — fedora, gnome</li>
-<li>v1256 — debian, home server media</li>
-<li>v3167 — debian, hosting.</li>
-<li>v3167 — debian, discord bot hosting.</li>
-</ul>
-
-<hr>
-
-<h1>projects & stuff</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Link</th>
-      <th>Service</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="/obfuscate.php">/obfuscater/</a></td>
-      <td>lua obfuscation</td>
-    </tr>
-    <tr>
-      <td><a href="/blog.html">/blog/</a></td>
-      <td>a blog place duh</td>
-    </tr>
-    <tr>
-      <td><span class="table-path">/notrace.email/</span></td>
-      <td>Notrace.email was a secure emailing that had no logs privacy using pgp encryption</td>
-    </tr>
-      </tr>
-      <td><span class="table-path">/linusware/</span></td>
-      <td>LinusWare is a sober linux external/executor. Thank you Vinegarhq.</td>
-    </tr>
-    </tr>
-      <td><span class="table-path">/reject.wtf/</span></td>
-      <td>reject.wtf is a windows roblox external</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr>
-
-<h1>stack</h1>
-<div class="box">
+<div class="logo">
 <pre>
-php        primary
-python     automation
-c#         game tools
-c/c++      imgui, memory
-js/node    backends
-docker     orchestration
-nginx      proxy
-ida/x64/   reversing 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣿⣿⣿⣿⣿⣶⠶⠶⠶⠶⠶⠶⢤⣤⣤⣀⣠⣤⣤⣄⠀⠀⠀⠀⠀⠀⣼⣿⠀⠀
+⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⡀⠀⢀⣀⣠⣴⣿⣉⣩⣉⣛⡿⠿⢿⣿⣿⣿⣿⣿⣟⣛⣻⣿⢿⣿⠿⠿⠿⡶⠶⠶⠶⢶⠶⠾⣿⣿⣛⣿⣿⣿⣿⣦⣄⣀⣀⣀⣸⣯⣿⣄⡀
+⣾⠿⢛⣟⠛⠛⠛⠛⠿⠻⢿⣿⣿⠛⢹⣡⢾⣿⢻⣍⠙⣿⣿⡟⢻⣏⣅⣷⣋⣿⣿⣿⣿⣿⣿⣿⣿⢀⣵⣤⣶⣶⣶⣿⣾⣷⣴⡿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⡿⠛⠉
+⣿⣹⣿⡤⠀⠐⠀⠀⠀⠀⠀⣸⣿⣤⣤⠿⠟⠛⣷⣿⣿⣿⡿⢿⠋⠉⣿⣿⣿⣿⣿⣿⣿⠉⠁⠀⠉⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣽⠇⣴⣇⣀⣴⣶⣿⠿⠟⠋⠉⠀⠀⠀⣰⣿⣟⣿⡟⠻⠬⠷⠴⠛⠏⣿⣿⣧⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢿⣧⣽⣿⣿⠿⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⣴⣿⣷⣿⠏⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣽⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 </pre>
 </div>
 
-<h1>contact</h1>
+<div class="line"></div>
+
+<div class="menu">
+    <a href="bios.html" class="btn">People</a>
+    <a href="content.html" class="btn">Links</a>
+    <a href="hoa.html" class="btn">HOA</a>
+</div>
+</div>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music/rostersong.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="bgMusic"></audio>
+<script>
+function enterSite() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("content").style.display = "block";
+
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.5;
+
+    music.play().catch(error => {
+        console.log("Music failed:", error);
+    });
+}
+
+</script>
+
+</body>
+</html>
