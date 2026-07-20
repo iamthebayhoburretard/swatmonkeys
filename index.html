@@ -134,6 +134,12 @@ body {
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
     background: rgba(255,255,255,0.1);
 }
+.notice-link:hover {
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+}
+</style>
 </style>
 </head>
 
@@ -180,6 +186,7 @@ body {
     <source src="music/rostersong.mp3" type="audio/mpeg">
 </audio>
 
+<audio id="bgMusic"></audio>
 <script>
 function enterSite() {
     document.getElementById("intro").style.display = "none";
